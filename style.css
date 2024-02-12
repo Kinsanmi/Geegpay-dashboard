@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* BACKGROUND IMAGE */
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url('/slider5.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* NAVIGATION REGION */
+.nav-container{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-container .fa{
+    display: none;
+}
+
+.navbar ul .fa{
+    display: none;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+.navbar ul li{
+    margin: 0px 20px;
+}
+.navbar ul li a{
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: whitesmoke;
+    border-bottom: 2px ;
+    position: relative;
+}
+.navbar ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    margin-top: 2px;
+    bottom: 3px;
+    left: 0;
+    background-color: aliceblue;
+    position: absolute;
+    transition: 1s ease;
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.navbar ul .close{
+    display: block;
+}
+
+.navbar ul .close{
+    display: none;
+}
+
+
+.dropdown{
+    position: absolute;
+    background-color: #fff;
+    margin-top: 0.3rem;
+    width: 115px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 2px #434343;
+    transform: translateY(0.3rem);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 5px;
+    padding: 0.3rem 0.4rem;
+    color: #000;
+}
+
+
+/* .dropdown{
+    display: block;
+    position: absolute;
+    background-color: #2e1d9f;
+    margin-left: 15px ;
+    color: #fff;
+
+} */
+
+.dropdown li{
+    display: block;
+    margin: 10px;
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdown{
+    display: none;
+}
+
+
+/* SHOP BUTTON */
+.shopbtn{
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #ce1b41;
+    background-color: #ce1b41;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+.shopbtn a{
+    text-decoration: none;
+    color: #fff;
+}
+.shopbtn:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+
+/* PAGE CONTENT WITH SEARCH BUTTON */
+.home{
+    padding: 0px 5%;
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    overflow: hidden;
+}
+.content{
+    line-height: 1.4;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.content h4{
+    text-transform: none;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.content p{
+    font-weight: normal;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.content span{
+    font-weight: 700;
+}
+
+
+/* BUTTON REGION */
+.home-inp{
+     position: relative;
+     margin-top: 2rem;
+}
+
+.home-inp input:first-child{
+    display: inline-block;
+    font-size: 16px;
+    padding: 16px 100px 16px 15px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #ce1b41;
+    width: 400px;
+}
+
+.home-inp input:nth-child(2){
+    position:absolute;
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 30px;
+    top: 1px;
+    font-size: 16px;
+    left: 269px;
+    outline: none;
+    border: none;
+    background: #2e1d9f;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.home-inp input:nth-child(2):hover{
+    background-color: transparent;
+    color: black;
+    transition: 0.75s ease;
+}
+
+/* FB UPWORK AND REMOTE */
+.right{
+    position: absolute;
+    top: 65%;
+    right: -200px;
+    padding: 0px 5%;
+    transform: rotate(90deg);
+}
+
+.right a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0px 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.right a:hover{
+    color: #ce1b41;
+    transition: 0.75s;
+}
+
+
+
+/* MEDIA QUERIES  */
+/* RESPONSIVE-CSS */
+
+@media (max-width:430px){
+
+    body{
+        height: 1000px;
+    }
+    .hamburger div{
+        background-color: black;
+        width: 20px;
+        height: 3px;
+        margin: 3px;
+        transition: 0.35s ease;
+    }
+
+    .hamburger.close-menu .line1{
+        transform: translate(-1px, 6px) rotate(-45deg);
+        background-color: #fff;
+    }
+    .hamburger.close-menu .line2{
+        opacity: 0;
+    }
+    .hamburger.close-menu .line3{
+        transform: translate(-1px, -6px) rotate(45deg);
+        background-color: #fff;
+    }
+
+
+
+    .nav-container.sticky{
+        background-color: #ce1b41;
+    }
+    
+    .header {
+        animation: image 1s ease-in-out;
+    }
+    .nav-container {
+        padding: 8px 2%;
+    }
+    .nav-container img{
+        width: 150px;
+    }
+    .nav-container .fa{
+        display: block;
+        color: rgb(13, 196, 186);
+        font-size: 24px;
+    }
+    .navbar.open{
+        transform: translateX(0%);
+    }
+
+    /* .navbar.open.close{
+        transform: translateX(0%);
+    } */
+
+    /*
+    .navbar{
+        position: fixed;
+        width: 50%;
+        top: 10%;
+        right: 0;
+        background-color: #ccc;
+        height: 100vh;
+        transform: translate(100%);
+        transition: transform 0.4s ease ;
+    } */
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        right: 0;
+        height: 100vh;
+        background-color: #152f5d;
+        text-align: center;
+        font-size: 18px;
+        z-index: 100;
+        transition: 0.45s ease;
+        transform: translate(100%);
+    }
+
+    .navbar ul{
+        flex-direction: column;
+    }
+    .navbar.open{
+        transform: translate(0%);
+    }
+
+    .navbar ul .fa{
+        display: block;
+        color: rgb(190, 212, 22);
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        font-size: 24px;
+    }
+    .navbar ul li{
+        padding: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li a{
+        display: block;
+        padding: 10px 0px;
+    }
+    .navbar ul li a:hover{
+        background-color: #2f4a79;
+        width: 100%;
+    }
+    .navbar ul li a:hover::after{
+        width: 0;
+    }
+
+    .navbar ul .close{
+        display: block;
+        position: absolute;
+        left: 10px;
+        bottom: 20px;
+        font-size: 40px;
+        color: #fff;
+        animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(45deg);
+        }
+        100%{
+            transform: rotate(90deg);
+        }
+    }
+
+    .shopbtn a{
+        text-align: center;
+    }
+    .shopbtn{
+        display: flex;
+        padding: 10px 10px;
+        margin-right: 10px;
+    }
+    .home{
+        padding: 0px 3%;
+
+    }
+    .content{
+        font-size: 20px;
+        margin-top: 10%;
+        font-weight: 500;
+    }
+    .content h4{
+        letter-spacing: 1px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+    .content span{
+        font-weight: 600;
+    }
+    .home-inp input:first-child{
+        display: none;
+        padding: 11px 70px 10px 11px;
+        width: 250px;
+    }
+    .home-inp input:nth-child(2){
+        display: none;
+        padding: 11px 30px;
+        border-radius: 30px;
+    }
+    .right{
+        top: 70%;
+        right: -100px;
+        padding: 0px 0px;
+        transform: rotate(90deg);
+    }
+    .right a{
+        color: #ffffff;
+        font-weight: 100;
+        margin: 0px 3px;
+        font-size: 14px;
+    }
+
+    @keyframes image{
+        from{
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+        to{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+
+}
+
+
+@media screen and (min-width:920px){
+    
+}
+
